@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Simon Game</title>
+  <meta name="viewport" content="width=device-width">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <div class="center">
+    <div class="title">Simon Game</div>
+    <div class="subtitle">Based on the 1970’s memory game.</div>
+    <button id="btn-normal">Normal</button>
+    <button id="btn-strict">Strict</button><br>
+    <button id="btn-start">Start Game</button>
+    <button id="btn-stop">Stop Game</button>
+    <div id="circle">
+      <div class="circle-btn" id="circle-btn1"></div>
+      <div class="circle-btn" id="circle-btn2"></div>
+      <div class="circle-btn" id="circle-btn3"></div>
+      <div class="circle-btn" id="circle-btn4"></div>
+      <div id="circle-inner">
+        <div id="circle-inner-txt">
+          <div id="txt-level">Level:</div><br>
+          <div id="txt-pattern-length">0</div>
+        </div>
+        <div id="txt-you-win">You Win!</div>
+      </div>
+    </div>
+  </div>
+  
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
+  <script src="js/index.js"></script>
+</body>
+</html>

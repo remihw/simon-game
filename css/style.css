@@ -1,0 +1,204 @@
+body {
+  background-color: #252525;
+  font-family: 'Roboto', sans-serif;
+}
+
+button {
+  font-family: inherit;
+}
+
+/*removes the extra padding on buttons in firefox*/
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+  /*fixes 1px shift issue in Chrome when changing div opacity*/
+  -webkit-backface-visibility: hidden;
+}
+
+.title {
+  color: #f2f2f2;
+  margin: 0 0 5px 0;
+  font-size: 47px;
+  white-space: nowrap;
+  word-spacing: 1px;
+}
+
+.subtitle {
+  color: #f2f2f2;
+  margin: 0 0 26px 0;
+  font-size: 16px;
+  white-space: nowrap;
+  word-spacing: 2px;
+}
+
+#btn-normal, #btn-strict {
+  border: none;
+  height: 28px;
+  width: 70px;
+  margin: 0 0 11px 0;
+  line-height: 27px;
+  cursor: pointer;
+  outline: none;
+}
+
+#btn-normal {
+  background-color: #125568;
+  color: #e8eaeb;
+  margin-right: 4px;
+  border-bottom-left-radius: 8px;
+  border-top-left-radius: 8px;
+}
+
+#btn-strict {
+  background-color: #3c3c3c;
+  color: #afaeae;
+  border-bottom-right-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+#btn-start, #btn-stop {
+  color: #f2f2f2;
+  border: none;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 32px;
+  height: 33px;
+  width: 149px;
+  margin: 0 0 28px 0;
+  cursor: pointer;
+  outline: none;
+}
+
+#btn-start {
+  background-color: #2e7913;
+  display: inline-block;
+}
+
+#btn-stop {
+  background-color: #3c3c3c;
+  display: none;
+}
+
+#circle {
+  position: relative;
+  height: 276px;
+  width: 276px;
+}
+
+.circle-btn {
+  cursor: default;
+  opacity: 0.3;
+  float: left;
+  height: 133px;
+  width: 133px;
+  /*fixes 1px shift issue in Chrome when changing div opacity*/
+  -webkit-backface-visibility: hidden;
+}
+
+#circle-btn1 {
+  background-color: #4fb966;
+  box-shadow: inset 20px 18px 60px #5ec775;
+  border-top-left-radius: 100%;
+  margin: 0 5px 5px 0;
+}
+
+#circle-btn2 {
+  background-color: #e54a46;
+  box-shadow: inset -20px 18px 60px #ea5754;
+  border-top-right-radius: 100%;
+  margin: 0 0 5px 5px;
+}
+
+#circle-btn3 {
+  background-color: #ead47d;
+  box-shadow: inset 20px -18px 60px #f2de8f;
+  border-bottom-left-radius: 100%;
+  margin: 5px 5px 0 0;
+}
+
+#circle-btn4 {
+  background-color: #5a92c8;
+  box-shadow: inset -20px -18px 60px #639ace;
+  border-bottom-right-radius: 100%;
+  margin: 5px 0 0 5px;
+}
+
+#circle-inner {
+  background-color: #252525;
+  color: #f2f2f2;
+  border-radius: 50%;
+  height: 150px;
+  width: 150px;
+  position: absolute;
+  top: 63px;
+  left: 63px;
+  z-index: 1;
+  text-align: center;
+}
+
+#circle-inner-txt {
+  position: relative;
+  top: 42px;
+}
+
+#txt-level {
+  font-size: 16px;
+  font-weight: 300;
+}
+
+#txt-pattern-length {
+  font-size: 43px;
+  line-height: 28px;
+}
+
+#txt-you-win {
+  font-size: 22px;
+  position: relative;
+  top: 62px;
+  display: none;
+}
+
+
+/**** button animations ****/
+
+@keyframes highlight {
+  0% {
+    opacity: 0.3;
+  }
+  10% {
+    opacity: 1.0;
+  }
+  65% {
+    opacity: 1.0;
+  }
+  100% {
+    opacity: 0.3;
+  }
+}
+
+.show {
+  animation-name: highlight;
+  animation-duration: 700ms;
+  animation-delay: 0ms;
+}
+
+.fade-in {
+  opacity: 1.0;
+  transition: opacity .10s;
+}
+
+.fade-out {
+  opacity: 0.3;
+  transition: opacity .15s;
+}
